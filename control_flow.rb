@@ -2,12 +2,12 @@ require 'pry'
 
 def admin_login(username, password)
   # your code here
-  if username="admin" && password ="12345"
+  if username=="admin" && password =="12345"
     "Access granted"
-  elsif username="ADMIN" && password="12345"
+  elsif username=="ADMIN" && password=="12345"
     "Access granted"
   else 
-    puts "Access denied"
+   "Access denied"
   end
 
 end
@@ -31,16 +31,15 @@ end
 
 def fizzbuzz(num)
   # your code here
-  if num==3 || num/3
+  if num % 3 == 0 && num % 5 == 0
+    "FizzBuzz"
+  elsif num % 3 == 0
     "Fizz"
-  elsif num==5 || num/5
+  elsif num % 5 == 0
     "Buzz"
-  # elsif num==3  && num==5
-  #   "FizzBuzz"
-  else 
+  else
     num
   end
- 
 end
 # binding.pry
 
@@ -51,17 +50,8 @@ def calculator(operation, num1, num2)
     when "-" then num1-num2
     when "*" then num1*num2
     when "/" then num1/num2
-    when "" then "Invalid operation!"
+    else
+      puts "Invalid operation!"
     end
-  # if operation="+"
-  #    num1+num2
-  # elsif operation="-"
-  #    num1-num2
-  # elsif operation="*"
-  #   num1*num2
-  # elsif opearion="/"
-  #   num1/num2
-  # else 
-  #   nil
-  # end
+  
 end
